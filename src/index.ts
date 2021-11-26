@@ -1,4 +1,5 @@
-import { Matrix as _Matrix, MatrixOptions, MatrixDynamicOptions } from './matrix'
+import { Matrix as _Matrix } from './matrix'
+import type { MatrixOptions, MatrixDynamicOptions } from './matrix'
 
 class Matrix {
   private _: _Matrix
@@ -32,4 +33,5 @@ class Matrix {
   }
 }
 
-export { Matrix, MatrixOptions }
+export { Matrix }
+export type { MatrixOptions }
