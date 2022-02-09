@@ -1,6 +1,6 @@
 {
   "name": "@crashmax/canvas-matrix2d",
-  "version": "1.2.0-pre.9",
+  "version": "2.0.0",
   "description": "canvas-matrix2d",
   "module": "./dist/matrix.js",
   "types": "./dist/matrix.d.ts",
@@ -16,7 +16,7 @@
   },
   "author": {
     "name": "Vitalij Ryndin",
-    "email": "sys@crashmax.ru",
+    "email": "crashmax.dev@gmail.com",
     "url": "https://crashmax.ru"
   },
   "keywords": [
