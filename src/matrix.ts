@@ -143,7 +143,7 @@ export class Matrix {
     this.traces.map((y, i) => {
       const char = String.fromCharCode(100 + 28 * Math.random())
       const symbol = this.symbols?.call(this)
-      const x = (i * this.fontSize) + this.fontSize
+      const x = i * this.fontSize
       const s = typeof symbol === 'object' && !!symbol.length ? symbol[randomInt(0, symbol.length - 1)] : char
       this.ctx.fillText(s, x, y)
 
