@@ -140,18 +140,22 @@ export class Matrix {
     this.ctx.fillStyle = this.getColor()
     this.ctx.font = `${this.fontSize}pt ${this.font.family}`
 
-    this.traces.map((y, i) => {
+    this.traces.forEach((axisY, i) => {
+      const axisX = i * this.fontSize
       const char = String.fromCharCode(100 + 28 * Math.random())
       const symbol = this.symbols?.call(this)
-      const x = i * this.fontSize
-      const s = typeof symbol === 'object' && !!symbol.length ? symbol[randomInt(0, symbol.length - 1)] : char
-      this.ctx.fillText(s, x, y)
+      const text = typeof symbol === 'object'
+        && !!symbol.length
+        ? symbol[randomInt(0, symbol.length - 1)]
+        : char
 
-      if (y > 100 + Math.random() * 10000) {
+      if (axisY > 100 + Math.random() * 10000) {
         this.traces[i] = 0
       } else {
-        this.traces[i] = y + 10
+        this.traces[i] = axisY + 10
       }
+
+      this.ctx.fillText(text, axisX, axisY)
     })
   }
 }
